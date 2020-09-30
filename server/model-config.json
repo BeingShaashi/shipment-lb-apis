@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "ShipmentPackage": {
+    "dataSource": "ShipmentsDB",
+    "public": true
+  },
+  "TeamUsers": {
+    "dataSource": "ShipmentsDB",
+    "public": true
+  }
+}

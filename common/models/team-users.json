@@ -1,0 +1,39 @@
+{
+  "name": "TeamUsers",
+  "plural": "TeamUsers",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "mobileNumber": {
+      "type": "string"
+    },
+    "emailId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,13 @@
+{
+  "ShipmentsDB": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "ShipmentsDB",
+    "password": "",
+    "name": "ShipmentsDB",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}

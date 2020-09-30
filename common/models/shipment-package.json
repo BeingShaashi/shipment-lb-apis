@@ -1,0 +1,81 @@
+{
+  "name": "ShipmentPackage",
+  "plural": "ShipmentPackage",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "defaultFn": "uuidv4"
+    },
+    "orderNumber": {
+      "type": "number"
+    },
+    "deliveryCompanies": {
+      "type": [
+        "string"
+      ]
+    },
+    "AWB": {
+      "type": "string"
+    },
+    "weightOfShipment": {
+      "type": "number"
+    },
+    "packageValue": {
+      "type": "number"
+    },
+    "createdAt": {
+      "type": "date"
+    },
+    "dispatchedDate": {
+      "type": "date"
+    },
+    "deliveredDate": {
+      "type": "date"
+    },
+    "returnReceivedDate": {
+      "type": "date"
+    },
+    "isShipmentRejectedByCustomer": {
+      "type": "boolean",
+      "default": false
+    },
+    "isCompanyLostCourier": {
+      "type": "boolean",
+      "default": false
+    },
+    "returnShipmentReason": {
+      "type": "string"
+    },
+    "packageCreatedBy": {
+      "type": "string"
+    },
+    "returnProcessedBy": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "CreatedBy": {
+      "type": "belongsTo",
+      "model": "TeamUsers",
+      "property": "packageCreatedBy"
+    },
+    "ReturnProcessedBy": {
+      "type": "belongsTo",
+      "model": "TeamUsers",
+      "property": "returnProcessedBy"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
